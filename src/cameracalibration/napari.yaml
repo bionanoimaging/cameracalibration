@@ -1,0 +1,48 @@
+name: cameracalibration
+display_name: Camera Calibration Tool
+contributions:
+  commands:
+    - id: cameracalibration.get_reader
+      python_name: cameracalibration._reader:napari_get_reader
+      title: Open data with Camera Calibration Tool
+    - id: cameracalibration.write_multiple
+      python_name: cameracalibration._writer:write_multiple
+      title: Save multi-layer data with Camera Calibration Tool
+    - id: cameracalibration.write_single_image
+      python_name: cameracalibration._writer:write_single_image
+      title: Save image data with Camera Calibration Tool
+    - id: cameracalibration.make_sample_data
+      python_name: cameracalibration._sample_data:make_sample_data
+      title: Load sample data from Camera Calibration Tool
+    - id: cameracalibration.make_qwidget
+      python_name: cameracalibration._widget:ExampleQWidget
+      title: Make example QWidget
+    - id: cameracalibration.make_magic_widget
+      python_name: cameracalibration._widget:example_magic_widget
+      title: Make example magic widget
+    - id: cameracalibration.make_func_widget
+      python_name: cameracalibration._widget:example_function_widget
+      title: Make example function widget
+  readers:
+    - command: cameracalibration.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.npy']
+  writers:
+    - command: cameracalibration.write_multiple
+      layer_types: ['image*','labels*']
+      filename_extensions: []
+    - command: cameracalibration.write_single_image
+      layer_types: ['image']
+      filename_extensions: ['.npy']
+  sample_data:
+    - command: cameracalibration.make_sample_data
+      display_name: Camera Calibration Tool
+      key: unique_id.1
+  widgets:
+    - command: cameracalibration.make_qwidget
+      display_name: Example QWidget
+    - command: cameracalibration.make_magic_widget
+      display_name: Example Magic Widget
+    - command: cameracalibration.make_func_widget
+      autogenerate: true
+      display_name: Example Function Widget
