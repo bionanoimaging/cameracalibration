@@ -15,8 +15,8 @@ contributions:
       python_name: cameracalibration._sample_data:make_sample_data
       title: Load sample data from Camera Calibration Tool
     - id: cameracalibration.make_qwidget
-      python_name: cameracalibration._widget:ExampleQWidget
-      title: Make example QWidget
+      python_name: cameracalibration._widget:CalReadnoiseQWidget
+      title: Make CalReadnoise
     - id: cameracalibration.make_magic_widget
       python_name: cameracalibration._widget:example_magic_widget
       title: Make example magic widget
@@ -40,7 +40,7 @@ contributions:
       key: unique_id.1
   widgets:
     - command: cameracalibration.make_qwidget
-      display_name: Example QWidget
+      display_name: CalReadnoise
     - command: cameracalibration.make_magic_widget
       display_name: Example Magic Widget
     - command: cameracalibration.make_func_widget

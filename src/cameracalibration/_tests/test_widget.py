@@ -1,6 +1,6 @@
 import numpy as np
 
-from cameracalibration import ExampleQWidget, example_magic_widget
+from cameracalibration import CalReadnoiseQWidget, example_magic_widget
 
 
 # make_napari_viewer is a pytest fixture that returns a napari viewer object
@@ -11,7 +11,7 @@ def test_example_q_widget(make_napari_viewer, capsys):
     viewer.add_image(np.random.random((100, 100)))
 
     # create our widget, passing in the viewer
-    my_widget = ExampleQWidget(viewer)
+    my_widget = CalReadnoiseQWidget(viewer)
 
     # call our widget method
     my_widget._on_click()
